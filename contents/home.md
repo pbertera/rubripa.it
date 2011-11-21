@@ -7,7 +7,3 @@
 Tramite il servizio di ricerca web puoi consultare liberamente l'elenco ed esprimere commenti sulle PA direttamente sui tuoi social network.
 
 
-Scopri [rubriPA.it ...][]
-
-  [Web API]: /api.html
-  [rubriPA.it ...]: /rubripa.html
