@@ -14,9 +14,7 @@ Puoi cercare una PA per DN: [Ricerca DN][]
 
 ### Ricerca geografica <span class="inprogress">Work in progress…</span>
 
-Puoi cercare una PA in base al luogo: [Ricerca geografica][]
 
   [Ricerca]: /simple-search-form.html
   [Ricerca avanzata]: /advanced-search-form.html
   [Ricerca DN]: /dn-search-form.html
-  [Ricerca geografica]: 
