@@ -7,45 +7,54 @@
 
 import web
 import app.controllers
+import config
+import mimetypes
 
-urls = (
-	# html stuff
-    '/', 'app.controllers.webpages.Index',
-    '/rubripa\.html', 'app.controllers.webpages.Rubripa',
-    '/search-menu\.html', 'app.controllers.searchmenu.HtmlMenu',
-	'/api.html', 'app.controllers.webpages.Api',	
-	'/faq.html', 'app.controllers.webpages.Faq',	
-	'/rubripa4snom.html', 'app.controllers.webpages.Rubripa4snom',
-	'/info.html', 'app.controllers.webpages.Info',
+from config import htmlview
+import markdown2
 
-	# Search forms	
-    '/simple-search-form\.html', 'app.controllers.simplesearchform.HtmlSimpleSearchForm',
-  	'/advanced-search-form\.html',	 'app.controllers.advancedsearchform.HtmlAdvancedSearchForm',
-  	'/dn-search-form\.html',	 'app.controllers.dnsearchform.HtmlDnSearchForm',
+# controller for Markdown pages:
+class PageClassTemplate:
+	content_file = ""
 
-	# Search results
-    '/simple-search\.html',        'app.controllers.search.HtmlSimpleSearch',
-    '/advanced-search\.html',      'app.controllers.search.HtmlAdvancedSearch',
-    '/dn-search\.html',   		'app.controllers.search.HtmlDnSearch',
-	
-	# html renders 
-    '/uff-search\.html',         'app.controllers.search.HtmlUffSearch',
-    '/aoo-search\.html',         'app.controllers.search.HtmlAooSearch',
-    '/pa-search\.html',      	 'app.controllers.search.HtmlPaSearch',
+	def GET(self):
+		html = markdown2.markdown_path(self.content_file)
+		return htmlview.page(html)
 
-    # static files
-    '/public/.+',           'app.controllers.public.public',
+# controller for static files
+class Public:
+    def GET(self):
+        try:
+            file_name = web.ctx.path.split('/')[-1]
+            web.header('Content-type', mime_type(file_name))
+            return open('.' + web.ctx.path, 'rb').read()
+        except IOError:
+            raise web.notfound()
 
-    # Backend URLS
-    '/dn-search',   		'app.controllers.search.DnSearch',
-    '/advanced-search',   	'app.controllers.search.AdvancedSearch',
-    '/simple-search',   'app.controllers.search.SimpleSearch',
-    '/uff-search',      'app.controllers.search.UffSearch',
-    '/aoo-search',      'app.controllers.search.AooSearch',
-    '/pa-search',       'app.controllers.search.PaSearch'
-)
+# mime type interpreter
+def mime_type(filename):
+    return mimetypes.guess_type(filename)[0] or 'application/octet-stream'
 
-myApp = web.application(urls, globals())
+myApp = web.application(mapping=(), fvars=globals())
+
+
+for page in config.pages:
+	if not page.has_key("content_file"):
+		continue
+	pattern = page["link"]
+	globals()[page["name"]] = type(page["name"],(PageClassTemplate,object,), dict(content_file=page["content_file"]))
+	myApp.add_mapping(pattern, page["name"])
+
+# add static file handler:
+try:
+	if config.static_dir:
+		myApp.add_mapping("/%s/.+" % config.static_dir, "Public")
+except AttributeError:
+	pass
+
+# add custom pages:
+for pattern, controller in config.custom_pages:
+	myApp.add_mapping(pattern, controller)
 
 if __name__ == "__main__":
     myApp.run()
