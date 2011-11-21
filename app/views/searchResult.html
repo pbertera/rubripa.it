@@ -1,0 +1,26 @@
+$def with (results)
+
+<h1>Risultato:</h1>
+
+$for entry in results:
+	<div class="res-entry">
+	$if entry['tipo'] == "amministrazione":
+        	$:htmlrenders.render_pa(entry)
+	$elif entry['tipo'] == "aoo":
+        	$:htmlrenders.render_aoo(entry)
+	$elif entry['tipo'] == "ufficio":
+        	$:htmlrenders.render_uff(entry)
+	$else:
+		<h2>Oggetto sconosciuto:</h2>
+		<pre>
+		$entry
+		</pre>
+		$continue
+	<div class="facebook">
+	<h3>Esprimi un commento sulla PA:</h3>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="www.rubripa.it/dn-search.html?dn=$entry['dn']" data-text="tweet title" data-count="horizontal" data-lang="it">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+	<div class="fb-like" data-href="www.rubripa.it/dn-search.html?dn=$entry['dn']" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+    <div class="fb-comments" data-href="www.rubripa.it/dn-search.html?dn=$entry['dn']" data-num-posts="2" data-width="500"></div>
+	</div>
+	</div>
+

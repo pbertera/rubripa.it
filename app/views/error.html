@@ -1,0 +1,7 @@
+$def with (results)
+
+<h1 class="wrong">Error:</h1>
+$for entry in results:
+	$for k in entry:
+        	<b>$k</b>: $entry[k]
+

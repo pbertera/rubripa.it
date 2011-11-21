@@ -1,0 +1,7 @@
+$def with (results)
+
+<h1>Risultato:</h1>
+$for pa in results:
+	$:htmlrenders.render_pa(pa)
+    <h3>Esprimi un commento sulla PA:</h3>
+	<div class="fb-comments" data-href="www.rubripa.it" data-num-posts="2" data-width="500" data-colorscheme="dark"></div>

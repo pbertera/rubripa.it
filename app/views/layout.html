@@ -1,0 +1,63 @@
+$def with (page, title='IPA')
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+    <meta name="author" lang="cs" content="Pietro Bertera; http://www.bertera.it" />
+    <meta name="copyright" lang="cs" content="Pietro Bertera; http://www.bertera.it" />
+    <meta name="description" content="rubripa: tutte le Pubbliche Aministrazioni italiane" />
+    <meta name="keywords" content="PA,Italia,webservices" />
+    <meta name="robots" content="all,follow" />
+    <link href="public/css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <title>rubriPA - tutte le Pubbliche Amministrazioni</title>
+  </head>
+  <body>
+  <div id="fb-root"></div>
+   <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="layout">
+      
+      <div id="header">
+        
+        <h1 id="logo"><a href="#" title="#">rubriPA<span>.it</span></a></h1>
+        <hr class="noscreen" />   
+          
+              
+        <div id="navigation">
+        <ul>
+$for item in allpages:
+	$ attr = ''
+	$if ctx.path == item['link']:
+		$ attr=' id="current"'
+	<li$:(attr)><a href="$item['link']">$item['name']</a></li>
+$pass
+        </ul>
+        </div>
+        <hr class="noscreen" />  
+    
+      </div>
+      
+          
+        <div id="main">
+
+$:page
+
+        
+        </div>
+        </div>
+        <div id="footer">
+        <div id="footer-inside">
+        <p id="copyright">&copy; 2011 - <a href="http://www.bertera.it">Bertera Pietro</a></p>
+        
+        </div><div style="clear: both;"></div></div>
+  </body>
+</html>

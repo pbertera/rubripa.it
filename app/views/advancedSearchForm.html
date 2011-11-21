@@ -1,0 +1,23 @@
+$def with ()
+
+<h2>Ricerca avanzata</h2>
+<p>
+	Inserisci il termine da ricercare.
+</p>
+
+	<form action="/advanced-search.html">
+		 <label>Tipo:</label><br/>
+		 <select name="tipo" multiple size="3">
+					<option value="ufficio">Ufficio</option>
+					<option value="amministrazione">Pubblica Amministrazione</option>
+					<option value="aoo">Area Organizzativa Omogenea</option>
+				</select><br>
+$for field in ["Acronimo", "aoo", "aooRef", "c", "CAurl", "codiceAmm", "codiceFiscaleAmm", "codiceUff", "CodiceUnivocoUO", "cognomeResp", "contatti", "dataIstituzione", "dataSoppressione", "dataVerifica", "description", "descrizioneS", "mailPEC", "dominioPEC", "facsimileTelephoneNumber", "fruibS", "l", "logoAmm", "mail", "mailResp", "mailS", "mailSPub", "nomeResp", "nomeS", "o", "ou", "postalCode", "provincia", "regione", "servizioTelematico", "sitoIstituzionale", "st", "street", "telephoneNumber", "telephonenumberResp", "telephonenumberS", "tipoAmm", "titoloResp"]:
+	 <label for="$field">$field</label><br/> <input id="$field" type="text" name="$field" tabindex="2"/>
+
+ <input class="button" type="submit" value="Submit" />
+ <input class="button" type="reset" value="Reset" />
+	</form>
+<p>
+	La ricerca avviene all'interno del database indicePA.
+</p>
