@@ -22,10 +22,25 @@ di interagire con le Pubbliche Amministrazioni italiane.
   [comoda interfaccia web]: /search-menu.html
   [Telefoni VoIP snom]: /rubripa4snom.html
 
+## Documentazione
+
+**rubriPA** è utilizzabile come servizio direttamente accedento alle [API](/api.html) pubbliche, oppure 
+è possibile installarlo su di un proprio server. E' consigliato installarlo localmente per utilizzi di produzione,
+magari replicando il database di indicePA.
+
+### Installazione
+
+- **Requisiti**: rubriPA è scritto in linguaggio [python](http://www.python.org) (versione minima: 2.6), utilizza un database LDAP (è necessario [python-ldap](http://www.python-ldap.org) >= 2.0.11) e utilizza [python-markdown2](https://github.com/trentm/python-markdown2). rubriPA utilizza [web.py](http://www.webpy.org) come web framework.
+
+- **Download**: Puoi scaricare l'ultima versione rubriPA dalle pagine github del progetto: [https://github.com/pbertera/rubripa.it/tags](https://github.com/pbertera/rubripa.it/tags)
+
+- **Installazione**: dopo aver scaricato ed estratto rubripa puoi lanciare direttamente l'eseguibile *application.py*, di default rimarrà in ascolto sulla porta http 8080, per accedere a rubripa non dovrai fare altro che puntare il browser su: http://localhost:8080
+**TODO:** Installazione con apache o lighttpd
+
+- **Replica del database LDAP**: TODO.
+
 ### Roadmap
 
-- Terminare la struttura del "CMS" che ospita rubripa.it (100%)
-- Estrarre dal sito la parte di ricerca in modo da creare una app indipendente, scaricabile ed installabile (10%)
 - Documentare la configurazone relativa ai telefoni snom (30%)
 - Pubblicare documentazione relativa all'installazione dell'applicazione, alla replica di indicepa e problematiche legate ad LDAP (10%)
 - Creare delle API di piu' alto livello (0%)
