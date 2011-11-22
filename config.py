@@ -5,7 +5,7 @@ web.config.debug = True
 
 indice_pa_uri = "ldap://indicepa.gov.it"
 indice_pa_base = "c=it"
-indice_pa_max_res = 1000
+indice_pa_max_res = 50
 
 pages = [ 
 		{"name": "Home", "link": "/", "content_file": "contents/home.md"},

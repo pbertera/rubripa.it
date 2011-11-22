@@ -301,7 +301,7 @@ class MyLDAPObject(ldap.ldapobject.LDAPObject,ldap.resiter.ResultProcessor):
 
 #TODO: error handling
 class IndicePA:
-    def __init__(self, indice_pa_uri="ldap://indicepa.gov.it", indice_pa_base="c=it", max_results=500):
+    def __init__(self, indice_pa_uri="ldap://indicepa.gov.it", indice_pa_base="c=it", max_results=50):
         self.indice_pa_base = indice_pa_base
         self.indice_pa_uri = indice_pa_uri
         self.max_results = max_results

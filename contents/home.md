@@ -58,8 +58,6 @@ new TWTR.Widget({
 
 Tramite il servizio di ricerca web puoi consultare liberamente l'elenco ed esprimere commenti sulle PA direttamente sui tuoi social network.
 
-
-Scopri [rubriPA.it ...][]
+Se hai un telefono [snom](http://www.snom.com) puoi accedere ai numeri di telefono di tutte le Pubbliche Amministrazioni italiane premendo un solo tasto: [rubriPA4snom](/rubripa4snom.html).
 
   [Web API]: /api.html
-  [rubriPA.it ...]: /rubripa.html

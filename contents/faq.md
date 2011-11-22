@@ -16,7 +16,10 @@
 **R:** NO! rubripa.it al momento non puo' offrire nessuna garanzia di comntinuità di servizio   
 
 **D:** Sto utilizzando rubripa.it ma la ricerca non sembra funzionare.   
-**R:** Verifica che la ricerca sul sito [http://indicepa.gov.it] funzioni, se non funziona riprova piu tardi. Altrimenti puoi [contattarmi]
+**R:** Verifica che la ricerca sul sito [http://indicepa.gov.it] funzioni, se non funziona riprova piu tardi. Altrimenti puoi [contattarmi]   
+
+**D:** Effettuando una ricerca ricevo l'errore *Error occured: Exceeded maximum results*   
+**R:** La ricerca ha trovato troppi risulatati, al momento rubriPA limita il numero massimo di risultati a 50. Devi modificare i termini di ricerca in modo da limitare il numero di risultati
 
   [Python]: http://www.python.org
   [web.py]: http://www.webpy.org
