@@ -80,7 +80,7 @@ iframe {
 }
 
   	/* hlavicka ------------------------------------------------------------------ */
-      #header {
+    #header {
 	top: 0; 
 	position: fixed;
 	/*background: #303030; */
@@ -124,7 +124,7 @@ iframe {
       
       #navigation{
         position: absolute;
-        left: 270px;
+        margin-left: 150px;
         /* line-height: 83px;*/
         line-height: 35px;
         display: block;
@@ -311,3 +311,17 @@ table.pa tbody th {
 	background: url("../img/web2pa.png") no-repeat scroll left center;
 	background-color: #303030;
 }
+
+/*
+#submenu {
+    position: fixed;
+	top: 35px;
+	width: 800px;
+	background-color: #000;
+	padding: 0px;
+}
+#submenu ul li {
+	display: inline;
+	padding: 0px;
+}
+*/

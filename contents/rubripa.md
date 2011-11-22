@@ -1,3 +1,12 @@
+<!--
+<div id="submenu">
+ <ul>
+  <li><a href="">rubriPa</a></li>
+  <li><a href="">Documentazione</a></li>
+  <li><a href="">Installazione</a></li>
+ </ul>
+</div>
+-->
 ## rubriPA
 
 ### Collega le tue applicazioni con le PA
@@ -11,16 +20,20 @@ di interagire con le Pubbliche Amministrazioni italiane.
     serializzati JSON
 -   Una [comoda interfaccia web][] per ricercare le PA ed esprimere commenti sui social networks.
 -   Accesso diretto ai numeri di telefono delle PA tramite [Telefoni VoIP snom][]
+
+#### Prossimamente:
+
 -   Un proxy LDAP verso IndicePA per poter utilizzare IndicePA come una
     **Rubrica aziendale** <span class="inprogress">(Work in
     progress…)</span>
 -   Un servizio di failover nel caso (frequente) di down di [IndicePA](http://indicepa.gov.it)
-    <span class="inprogress">(Work in progress…)</span>
--   … [idee] ?
+    <span class="inprogress">(Work in progress...)</span>
 
   [Web API]: /api.html
   [comoda interfaccia web]: /search-menu.html
   [Telefoni VoIP snom]: /rubripa4snom.html
+
+--------------------------------------------
 
 ## Documentazione
 
@@ -30,7 +43,7 @@ magari replicando il database di indicePA.
 
 ### Installazione
 
-- **Requisiti**: rubriPA è scritto in linguaggio [python](http://www.python.org) (versione minima: 2.6), utilizza un database LDAP (è necessario [python-ldap](http://www.python-ldap.org) >= 2.0.11) e utilizza [python-markdown2](https://github.com/trentm/python-markdown2). rubriPA utilizza [web.py](http://www.webpy.org) come web framework.
+- **Requisiti**: rubriPA è scritto in linguaggio [python](http://www.python.org) (>=2.6), utilizza un database LDAP (è necessario [python-ldap](http://www.python-ldap.org) >= 2.0.11) e utilizza [python-markdown2](https://github.com/trentm/python-markdown2). rubriPA utilizza [web.py](http://www.webpy.org) come web framework.
 
 - **Download**: Puoi scaricare l'ultima versione rubriPA dalle pagine github del progetto: [https://github.com/pbertera/rubripa.it/tags](https://github.com/pbertera/rubripa.it/tags)
 

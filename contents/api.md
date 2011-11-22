@@ -16,6 +16,12 @@ In caso di errore la response HTTP conterrà il codice di errore, mentre il corp
 
 ************************************************************************
 
+Tutte queste API ritornano degli oggetti JSON che riflettono la struttura degli oggetti LDAP
+presenti nel database di IndicePA.
+Per maggiori infomrazioni sulla struttura dati e lo schema LDAP onsultate la documentazione relativa: [http://indicepa.gov.it/pla-documentazione.php](http://indicepa.gov.it/pla-documentazione.php) 
+
+************************************************************************
+
 #### /simple-search
 
 * **metodo HTTP**: GET
