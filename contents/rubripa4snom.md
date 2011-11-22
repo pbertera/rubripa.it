@@ -17,5 +17,7 @@ snom:
 <iframe width="450" height="500" src="http://snombrowser.bertera.it/phone.php?url=http://snom.rubripa.it/search"></iframe>
 </p>
 
+rubripa4snom è scaricabile dalla pagina github del progetto: [https://github.com/pbertera/rubripa4snom](https://github.com/pbertera/rubripa4snom)
+
  [Snomwiki]:http://wiki.snom.com/Category:HowTo:Minibrowser#Keypad-_Triggered
 
