@@ -50,9 +50,7 @@ new TWTR.Widget({
                  <div class="rbbot"><div></div></div>
 </div>
 
-## Benvenuto in rubriPA.it
-
-### Collega le tue applicazioni con le Pubbliche Amministrazioni italiane
+### Collega le tue applicazioni alle Pubbliche Amministrazioni italiane con rubriPA.it
 
 **rubriPA.it** espone via [Web API][] l'elenco di tutte le PA italiane.
 
