@@ -6,6 +6,8 @@ web.config.debug = True
 indice_pa_uri = "ldap://indicepa.gov.it"
 indice_pa_base = "c=it"
 indice_pa_max_res = 50
+indice_pa_bind_dn = "uid=user@example.com,o=utentildap"
+indice_pa_bind_pw = "mypass"
 
 pages = [ 
 		{"name": "Home", "link": "/", "content_file": "contents/home.md"},
