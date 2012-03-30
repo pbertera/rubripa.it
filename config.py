@@ -5,11 +5,15 @@ web.config.debug = True
 
 indice_pa_uri = "ldap://indicepa.gov.it"
 indice_pa_base = "c=it"
-indice_pa_max_res = 1000
+indice_pa_max_res = 50
+indice_pa_bind_dn = "uid=user@example.com,o=utentildap"
+indice_pa_bind_pw = "XXXXXXXXXXX"
 
 pages = [ 
 		{"name": "Home", "link": "/", "content_file": "contents/home.md"},
 		{"name": "Cerca", "link": "/search-menu.html", "content_file": "contents/search-menu.md"},
+		{"name": "rubriPa", "link": "/rubripa.html", "content_file": "contents/rubripa.md"},
+		{"name": "rubriPa4snom", "link": "/rubripa4snom.html", "content_file": "contents/rubripa4snom.md"},
 		{"name": "API", "link": "/api.html", "content_file": "contents/api.md"},
 		{"name": "Faq", "link": "/faq.html", "content_file": "contents/faq.md"},
 		{"name": "Info", "link": "/info.html", "content_file": "contents/info.md"},
