@@ -301,11 +301,9 @@ class MyLDAPObject(ldap.ldapobject.LDAPObject,ldap.resiter.ResultProcessor):
 
 #TODO: error handling
 class IndicePA:
-    def __init__(self, indice_pa_uri="ldap://indicepa.gov.it", indice_pa_base="c=it", max_results=50, indice_pa_bind_dn=None, indice_pa_bind_pw=None):
+    def __init__(self, indice_pa_uri="ldap://indicepa.gov.it", indice_pa_base="c=it", max_results=50):
         self.indice_pa_base = indice_pa_base
         self.indice_pa_uri = indice_pa_uri
-        self.indice_pa_bind_dn = indice_pa_bind_dn
-        self.indice_pa_bind_pw = indice_pa_bind_pw
         self.max_results = max_results
 
 
@@ -368,8 +366,6 @@ class IndicePA:
     def _do_search(self, query, attrlist=None, base=indice_pa_base, scope=ldap.SCOPE_SUBTREE): 
 
         self._ldapconn = MyLDAPObject(self.indice_pa_uri)
-		if self.indice_pa_bind_dn:
-			self._ldapconn.simple_bind_s(self.indice_pa_bind_dn,self.indice_pa_bind_pw)
         msg_id = self._ldapconn.search(base, scope, query, attrlist=attrlist)
         ret = []
 		
