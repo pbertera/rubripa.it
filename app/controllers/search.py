@@ -12,7 +12,11 @@ import config
 from config import htmlview
 from config import indice_pa_max_res
 
-IPA = indicePA.IndicePA(max_results=config.indice_pa_max_res, indice_pa_uri=config.indice_pa_uri, indice_pa_base=config.indice_pa_base)
+IPA = indicePA.IndicePA(max_results=config.indice_pa_max_res,\
+	indice_pa_uri=config.indice_pa_uri,\
+	indice_pa_base=config.indice_pa_base,\
+	indice_pa_bind_dn=config.indice_pa_bind_dn,\
+	indice_pa_bind_pw=config.indice_pa_bind_pw)
 #IPA = indicePA.IndicePA(max_results=config.indice_pa_max_res)
 
 class AbstractAdvancedSearch:
